@@ -1,0 +1,13 @@
+version: 2
+
+updates:
+  # Can be enabled if Nuget references are converted https://github.com/dotnet/project-system/issues/2491#issuecomment-874924412
+  # - package-ecosystem: nuget
+  #   directory: "/ep_weather_host"
+  #   schedule:
+  #     interval: "weekly"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"

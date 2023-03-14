@@ -10,6 +10,7 @@ on:
   push:
     branches:
       - '**'
+      - "!dependabot/**"
     tags-ignore:
       - '**'
   pull_request:
