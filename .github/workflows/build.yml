@@ -10,6 +10,7 @@ on:
   push:
     branches:
       - '**'
+      - "!dependabot/**"
     tags-ignore:
       - '**'
   pull_request:
@@ -135,7 +136,7 @@ jobs:
         exit /b 0
 
     - name: Upload artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: ep_bin_multi_${{ steps.vars.outputs.sha_short }}_${{ steps.vars.outputs.branch }}
         path: |
