@@ -47,13 +47,13 @@ jobs:
         echo "build_dir: ${{ github.event.inputs.build_dir }}"
 
     - name: Checkout latest build and submodules
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       if: github.event.inputs.ref == ''
       with:
         submodules: recursive
     
     - name: Checkout specific build and submodules
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       if: github.event.inputs.ref != ''
       with:
         ref: ${{ github.event.inputs.ref }}
